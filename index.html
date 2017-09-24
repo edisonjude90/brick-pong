@@ -1,0 +1,51 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>
+			Brick Pong
+		</title>
+		<meta charset=utf-8>
+		<link href="main.css" rel = "stylesheet" />
+	</head>
+	<body>
+
+	<div class = "container">	
+		<div class = "header">
+			<div class="heading">
+				<h2>Brick Pong</h2>
+			</div>
+			<div class="game-point-table">
+				<div>
+					<div>Life : <span id = "game-life2">0</span></div>
+					<div>Points : <span id = "game-points">0</span></div>
+				</div>
+			</div>
+		</div>
+		<div class = "game-area">
+			<canvas id = "canvas-game"></canvas>
+		</div>
+
+		<div id = "game-popup-background"></div>
+		<div id = "game-popup">
+			<div>
+				<h1>
+					Brick Pong
+				</h1>
+			</div>
+			<div id = "game-best-score-sec">
+				Best Score : <span id = "game-best-score">100</span>
+			</div>
+			<div>
+				Life : <span id = "game-life1">0</span>
+			</div>
+			<div class = "game-action-btn">
+				<button class = "btn" id = "btnStart">Start Game</button>
+				<button class = "btn" id = "btnContinue">Continue</button>
+			</div>
+		</div>	
+
+
+	</div>	
+	<script type="text/javascript" src = "main.js"></script>
+	</body>
+</html>

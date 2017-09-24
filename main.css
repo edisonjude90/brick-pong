@@ -1,0 +1,82 @@
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	font-family: arial;
+	background-color: #000000;
+	color:#C1C1C1;
+}
+
+.container{
+	width: 100%;
+	margin: 0px auto;
+}
+
+div.header{
+	display: flex;
+}
+
+div.heading {
+	text-align: left;
+	width: 50%;
+	padding:5px 0px 0px 5px; 
+}
+
+div.game-point-table{
+	width: 50%;
+	text-align: right;
+	padding:15px 5px 0px 0px;
+}
+
+div.game-point-table div{
+	display: inline-block;
+}
+
+div.game-area{
+	margin:3px;
+	border: solid 1px #6B6B6B;
+}
+
+/****** Game Pop Up Start ********/
+
+#game-popup-background {
+    background: rgba(255,255,255,0.8);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    display: none;
+}
+
+#game-popup {
+    margin: 0 auto;
+    text-align: center;
+    z-index: 1001;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    background: rgba(0,0,0,0.7);
+    width: 50%;
+    padding: 20px 0px;
+    display: none;
+} 
+
+#game-popup div {
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.btn {
+    background: #949494;
+    border: 0px solid #FFF;
+    height: 40px;
+    width: 157px;
+    color: #FFF;
+    box-shadow: 0 0 15em #FFF;
+}
+/****** Game Pop Up End *********/
