@@ -205,21 +205,20 @@ function PongBar(){
 	this.width = 130;
 	this.height = 10;
 	this.color = "#FFFFFF";
-	this.velocity = 40;
+	this.velocity = 25;
 
 }
 
-PongBar.prototype.move = function(event,direction){
+PongBar.prototype.move = function(event){
 
 	var keyPressedCode = event.keyCode || event.which;
-
-	if (keyPressedCode == 37 || direction == "L"){
+	if (keyPressedCode == 37){
 	
 		if (this.x > 0){
 			this.x = this.x - this.velocity;
 		}
 
-	}else if (keyPressedCode == 39 || direction == "R"){
+	}else if (keyPressedCode == 39){
 	
 		if (this.x < wWidth - this.width){
 			this.x = this.x + this.velocity;
@@ -304,32 +303,6 @@ function loop(){
 document.getElementsByTagName("body")[0].onkeypress = function(event){
 	bar.move.call(bar,event);
 }
-
-
-window.addEventListener("load",function(){
-
-	var currentX;
-	document.body.addEventListener("click",function(e){
-
-		var windowCenter = wWidth / 2; 
-
-		if (currentX > windowCenter){
-			bar.move.call(bar,event,"R");
-		}else if (currentX < windowCenter){
-			bar.move.call(bar,event,"L");
-		}
-
-	}, false);
-
-	document.body.addEventListener("touchend",function(e){
-
-		e.preventDefault();
-		currentX = e.changedTouches[0].pageX;
-		e.target.click();
-
-	}, false);
-
-},false);
 
 document.getElementById("btnStart").onclick = function(){
 	document.getElementById("game-points").innerHTML = 0;
