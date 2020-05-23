@@ -68,17 +68,17 @@ var gameControl = {
 		document.getElementById("game-best-score-sec").style.display = "block";
 		document.getElementById("btnStart").style.display = "inline-block";
 		document.getElementById("btnContinue").style.display = "none";
-		document.getElementById("btnContinue").focus();
 		document.getElementById("game-popup").style.display = "block";
 		document.getElementById("game-popup-background").style.display = "block";	
+		document.getElementById("btnStart").focus();
 	},
 	gameContinue:function(){
 		document.getElementById("game-best-score-sec").style.display = "none";
 		document.getElementById("btnContinue").style.display = "inline-block";
 		document.getElementById("btnStart").style.display = "none";
-		document.getElementById("btnContinue").focus();
 		document.getElementById("game-popup").style.display = "block";
 		document.getElementById("game-popup-background").style.display = "block";	
+		document.getElementById("btnContinue").focus();
 	},
 	initGame:function(){
 		gameControl.updateGameLife();
@@ -301,7 +301,7 @@ function loop(){
 
 // Events
 
-document.getElementsByTagName("body")[0].onkeypress = function(event){
+document.getElementsByTagName("body")[0].onkeydown = function(event){
 	bar.move.call(bar,event);
 }
 
