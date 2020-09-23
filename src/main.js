@@ -200,12 +200,12 @@ Ball.prototype.draw = function(){
 
 function PongBar(){
 
-	this.x = 400;
+	this.x = 0;
 	this.y = (wHeight - 10);
 	this.width = 130;
 	this.height = 10;
 	this.color = "#FFFFFF";
-	this.velocity = 40;
+	this.velocity = 50;
 
 }
 
@@ -240,7 +240,7 @@ PongBar.prototype.draw = function(){
 }
 
 
-var ball = new Ball(0,0,4,4,10);
+var ball = new Ball(0,0,6,6,10);
 var bar = new PongBar();
 
 function loop(){
@@ -335,9 +335,9 @@ document.getElementById("btnStart").onclick = function(){
 	document.getElementById("game-points").innerHTML = 0;
 	document.getElementById("game-popup").style.display = "none";
 	document.getElementById("game-popup-background").style.display = "none";
-	ball.x = 300;
+	ball.x = 50;
 	ball.y = 100;
-	bar.x = 400;
+	bar.x = 50;
 	gameControl.gameAbort = false;
 	gameControl.loopGame();
 }	
@@ -345,9 +345,9 @@ document.getElementById("btnStart").onclick = function(){
 document.getElementById("btnContinue").onclick = function(){
 	document.getElementById("game-popup").style.display = "none";
 	document.getElementById("game-popup-background").style.display = "none";
-	ball.x = 300;
+	ball.x = 50;
 	ball.y = 100;
-	bar.x = 400;
+	bar.x = 50;
 	gameControl.gameAbort = false;
 	gameControl.loopGame();
 }

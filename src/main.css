@@ -40,6 +40,10 @@ div.game-area{
 	border: solid 1px #6B6B6B;
 }
 
+.game-instruction li {
+    padding: 5px 0px;   
+}
+
 /****** Game Pop Up Start ********/
 
 #game-popup-background {
@@ -58,11 +62,11 @@ div.game-area{
     text-align: center;
     z-index: 1001;
     position: absolute;
-    top: 25%;
-    left: 25%;
+    top: 10%;
+    left: 7%;
     background: rgba(0,0,0,0.7);
-    width: 50%;
-    padding: 20px 0px;
+    width: 80%;
+    padding: 20px 10px;
     display: none;
 } 
 
